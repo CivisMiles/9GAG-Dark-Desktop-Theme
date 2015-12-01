@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         Dark 9GAG Desktop Theme
 // @description  A dark theme for 9GAG on desktop (non-mobile) environment
-// @version      0.5
+// @version      0.5.1
 // @author       CivisMiles
 // @license      GNU GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
 // @namespace    http://9gag.com/u/civismiles
 // @homepage     https://github.com/CivisMiles/Dark-9GAG-Desktop-Theme
 // @updateURL    https://github.com/CivisMiles/Dark-9GAG-Desktop-Theme/raw/master/Dark_9GAG_Desktop_Theme.user.js  
-// @supportURL   https://github.com/CivisMiles/Dark-9GAG-Desktop-Theme/issues
+// @supportURL   https://docs.google.com/forms/d/15Xe6K1VUnvCFHC7MYDbJVwAFWSGbmALXPRhANAWPuhA/viewform
 // @grant        none
 // @run-at       document-start
 // @include      http://9gag.com/*
