@@ -5,7 +5,7 @@
 // @author       CivisMiles
 // @license      GNU GPL version 3 or any later version; https://github.com/CivisMiles/9GAG-Dark-Desktop-Theme/blob/master/LICENSE; http://www.gnu.org/copyleft/gpl.html
 // @homepage     https://github.com/CivisMiles/9GAG-Dark-Desktop-Theme
-// @updateURL    https://github.com/CivisMiles/9GAG-Dark-Desktop-Theme/raw/master/9GAG_Dark_Desktop_Theme.user.js  
+// @updateURL    https://github.com/CivisMiles/9GAG-Dark-Desktop-Theme/raw/master/9GAG_Dark_Desktop_Theme.user.js
 // @supportURL   https://docs.google.com/forms/d/15Xe6K1VUnvCFHC7MYDbJVwAFWSGbmALXPRhANAWPuhA/viewform
 // @supportURL   https://github.com/CivisMiles/9GAG-Dark-Desktop-Theme/issues
 // @grant        none
