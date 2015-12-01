@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         9GAG DDT *Next Version Changes*
 // @description  !!!!TEST Version!!!! A dark theme for 9GAG on desktop (non-mobile) environment !!!!TEST Version!!!!
-// @version      0.6.0.0 beta
+// @version      0.6.0.1 beta
 // @author       CivisMiles
 // @license      GNU GPL version 3 or any later version; https://github.com/CivisMiles/Dark-9GAG-Desktop-Theme/blob/master/LICENSE; http://www.gnu.org/copyleft/gpl.html
 // @homepage     https://github.com/CivisMiles/Dark-9GAG-Desktop-Theme
@@ -18,11 +18,11 @@ styleEl.type = 'text/css';
 styleEl.innerHTML = '.popup-menu ul { background-color: #101010; border: 1px solid #999} .popup-menu a { background-color: #101010; color: #999;} section.modal header h3{ color: #999;} section.modal header p{ color: #999;} section.modal a.btn-close { -webkit-filter: invert(60%);} section.modal.upload .source-file { border: 1px solid #999; background-color: #101010} section.modal.upload .source-meme, section.modal.upload .source-url { border: 1px solid #999;} #container { background-color: #101010;} section.section-header { background-color: #101010; border-bottom: 1px solid #999; box-shadow: none} section.profile-header .profile.no-banner .info { background-color: #101010;} section.profile-header h2 { color: #999;} section.profile-header .info p { color: #999; opacity: 1;} .section-nav { background-color: #101010; border-bottom: 1px solid #999;} .section-nav a { color: #999;} .section-nav a.selected { background-color: rgba(255,255,255,.2); color: #101010;} section#list-view-2 .activity-text a { color: #999;} section#list-view-2 .activity-text { color: #999;} section.section-header h2 { color: #999;} section.block-feature-cover .info-container a { color: #999;} h2.sidebar-title { color: #999;} section.block-social-love .social-love a.instagram-follow { background-color: #FDFDFD;} section.footer { background-color: transparent;} a.back-to-top { -webkit-filter: invert(100%); border: 1px solid #666} section#list-view-2 article { border-top: 1px solid #999;}  section#list-view-2 h2 a { background-color: transparent; color: #999;} a.post-read-more { background-color: #101010; border: 1px solid #999;} .post-read-more .shadow { width: 0px; height: 0px;} .post-text-container { color: #999;} .loading a.btn.end { color: #fff; background-color: #09f; border-color: #09f;} section.modal { background-color: #101010;} section#idle h2 { color: #999;} section#idle .ticker { border: 1px solid #999;} .ticker a .info h3 { color: #999;} section#individual-post header h2 { background-color: transparent; color: #999;} .post-afterbar-a.in-post-top { background-color: #101010;} .horizontal-vote a.up span { background-color: #101010;} .post-afterbar-a .others a.more { background-color: #101010;} .post-afterbar-meta { border-top: 1px solid #999;} .CS3 { background-color: #101010;} .CS3 .tab-bar { border-bottom: 1px solid #999;} .CS3 .tab-bar h3 { color: #999;} .CS3 .tab-bar ul.tab li.active a { background-color: rgba(255,255,255,.2); color: #101010;} .CS3 .tab-bar ul.tab a { color: #999;} .CS3 .comment-box .payload .textarea-container textarea.focus, .CS3 .comment-box.indent-1 .payload .textarea-container textarea { background-color: #101010; color: #999;} .CS3 .comment-entry .payload .username { color: #999;} .CS3 span.drop { -webkit-filter: invert(60%);} .CS3 .comment-pop-menu ul { background-color: #101010; border: 1px solid #999} .CS3 .comment-pop-menu a { background-color: #101010; color: #999} .CS3 .comment-entry .payload .content { color: #999;}';
 document.documentElement.appendChild(styleEl);
 /*
-  Part   ---   Description/What it effects   --------------------------   Current text within "styleE1.innerHTML"   -------------------------------------------   Extra Notes
-    1   ----   General page background color   ------------------------------------   #container { background-color: #101010;}   ------------------------------   N/A
-    2   ----   General popup menu border & background color   ---------------------   .popup-menu ul { background-color: #101010; border: 1px solid #999}   ---   N/A
-    3   ----   General popup menu text color   ------------------------------------   .popup-menu a { background-color: #101010; color: #999;}   --------------   N/A
-    4   ----   General popup window exit button image color inversion   -----------   section.modal a.btn-close { -webkit-filter: invert(60%);}   -------------   N/A
+  Part   ---   Description/What it effects   ------------------------------   Current text within "styleE1.innerHTML"   -------------------------------   Extra Notes
+    1   ----   General page background color   ----------------------------   #container { background-color: #101010;}   ------------------------------   N/A
+    2   ----   General popup menu border & background color   -------------   .popup-menu ul { background-color: #101010; border: 1px solid #999}   ---   N/A
+    3   ----   General popup menu text color   ----------------------------   .popup-menu a { background-color: #101010; color: #999;}   --------------   N/A
+    4   ----   General popup window exit button image color inversion   ---   section.modal a.btn-close { -webkit-filter: invert(60%);}   -------------   N/A
 */
 
 /* Search Bar changes */
@@ -42,10 +42,10 @@ styleNotifyMenu.type = 'text/css';
 styleNotifyMenu.innerHTML = '.notification-menu { background-color: #101010; border: 1px solid #999} .notification-menu .title h3{ color: #999;} .notification-menu .bumper{ background-color: #101010; border-top: 1px solid #999}';
 document.documentElement.appendChild(styleNotifyMenu);
 /*
-  Part   ---   Description/What it effects   --------------------------   Current text within "styleNotifyMenu.innerHTML"   --------------------------------------------------   Extra Notes
-    1   ----   Notification menu background and border color   --------------------   .notification-menu { background-color: #101010; border: 1px solid #999}   --------------   N/A
-    2   ----   Notification menu title text color   -------------------------------   .notification-menu .title h3{ color: #999;}   ------------------------------------------   N/A
-    3   ----   Notification menu bottom bumper background and border color   ------   .notification-menu .bumper{ background-color: #101010; border-top: 1px solid #999}   ---   N/A
+  Part   ---   Description/What it effects   -----------------------------------   Current text within "styleNotifyMenu.innerHTML"   --------------------------------------   Extra Notes
+    1   ----   Notification menu background and border color   -----------------   .notification-menu { background-color: #101010; border: 1px solid #999}   --------------   N/A
+    2   ----   Notification menu title text color   ----------------------------   .notification-menu .title h3{ color: #999;}   ------------------------------------------   N/A
+    3   ----   Notification menu bottom bumper background and border color   ---   .notification-menu .bumper{ background-color: #101010; border-top: 1px solid #999}   ---   N/A
 */
 
 /*
