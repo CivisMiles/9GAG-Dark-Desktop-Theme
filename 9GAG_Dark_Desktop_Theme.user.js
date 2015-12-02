@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         9GAG Dark Desktop Theme (9GAG DDT)
 // @description  A dark theme for 9GAG on desktop (non-mobile) environment
-// @version      0.6.0
+// @version      0.6.0.1
 // @author       CivisMiles
 // @license      GNU GPL version 3 or any later version; https://github.com/CivisMiles/9GAG-Dark-Desktop-Theme/blob/master/LICENSE; http://www.gnu.org/copyleft/gpl.html
 // @homepage     https://github.com/CivisMiles/9GAG-Dark-Desktop-Theme
@@ -149,7 +149,7 @@ document.documentElement.appendChild(IdleWindow);
     3   ----   Suggested posts title text color   ---   .ticker a .info h3 { color: #999;}   ----------------   N/A
 */
 
-/*  changes */
+/* Individual Post Page changes */
 IndividPost.innerHTML = 'section#individual-post header h2 { background-color: transparent; color: #999;} .post-afterbar-a.in-post-top { background-color: #101010;} .horizontal-vote a.up span { background-color: #101010;} .post-afterbar-a .others a.more { background-color: #101010;} .post-afterbar-meta { border-top: 1px solid #999;}';
 document.documentElement.appendChild(IndividPost);
 /*
@@ -161,7 +161,7 @@ document.documentElement.appendChild(IndividPost);
     5   ----   Border below post and above report link color   --------------------------------------   .post-afterbar-meta { border-top: 1px solid #999;}   ---------------------------------   N/A
 */
 
-/*  Comments area changes */
+/* Comments area changes */
 CommentSection.innerHTML = '.CS3 { background-color: #101010;} .CS3 .tab-bar { border-bottom: 1px solid #999;} .CS3 .tab-bar h3 { color: #999;} .CS3 .tab-bar ul.tab li.active a { background-color: rgba(255,255,255,.2); color: #101010;} .CS3 .tab-bar ul.tab a { color: #999;} .CS3 .comment-box .payload .textarea-container textarea.focus, .CS3 .comment-box.indent-1 .payload .textarea-container textarea { background-color: #101010; color: #999;} .CS3 .comment-entry .payload .username { color: #999;} .CS3 .comment-entry .payload .content { color: #999;} .CS3 span.drop { -webkit-filter: invert(60%);} .CS3 .comment-pop-menu ul { background-color: #101010; border: 1px solid #999;} .CS3 .comment-pop-menu a { background-color: #101010; color: #999;}';
 document.documentElement.appendChild(CommentSection);
 /*
