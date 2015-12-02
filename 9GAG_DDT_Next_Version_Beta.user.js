@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         9GAG DDT *Next Version Changes*
 // @description  !!!!TEST Version!!!! A dark theme for 9GAG on desktop (non-mobile) environment !!!!TEST Version!!!!
-// @version      0.6.0.5 beta
+// @version      0.6.0.6 beta
 // @author       CivisMiles
 // @license      GNU GPL version 3 or any later version; https://github.com/CivisMiles/Dark-9GAG-Desktop-Theme/blob/master/LICENSE; http://www.gnu.org/copyleft/gpl.html
 // @homepage     https://github.com/CivisMiles/Dark-9GAG-Desktop-Theme
@@ -98,20 +98,21 @@ document.documentElement.appendChild(ProfilePage);
 */
 
 /* Settings Pages changes */
-SettingsPages.innerHTML = 'ul.form-nav li a.selected { background-color: #999; color: #101010; border-color: #999;} section#settings h2 { color: #999;} .field label { color: #999;} input[type=email], input[type=password], input[type=text], input[type=url] { background-color: #999; border-color: #999; color: #101010;} select { background-color: #999; color: #101010;} .field.avatar input[type=file] { color: #999;} form#setting textarea { background-color: #999; border-color: #999; color: #101010;} .setting-social-connect label { color: #999;} .setting-social-connect .connection { Background-color: #999; box-shadow: none;} .setting-social-connect .connection p.label { color: #101010;}';
+SettingsPages.innerHTML = 'ul.form-nav li a.selected { background-color: #999; color: #101010; border-color: #999;} section#settings h2 { color: #999;} .field label { color: #999;} input[type=email], input[type=password], input[type=text], input[type=url] { background-color: #999; border-color: #999; color: #101010;} select { background-color: #999; color: #101010;} .field.avatar input[type=file] { color: #999;} form#setting textarea { background-color: #999; border-color: #999; color: #101010;} .setting-social-connect label { color: #999;} .setting-social-connect .connection { Background-color: #999; box-shadow: none;} .setting-social-connect .connection p.label { color: #101010;} .setting-social-connect .connection a.btn, .setting-social-connect .connection a.thick { border: 1px solid #101010;}';
 document.documentElement.appendChild(SettingsPages);
 /*
-  Part   ---   Description/What it effects   -----------------------------   Current text within "SettingsPages.innerHTML"   -----------------------------------------------------------------------------------------------   Extra Notes
-    1   ----   Settings selected section background & text color   -------   ul.form-nav li a.selected { background-color: #999; color: #101010; border-color: #999;}   ----------------------------------------------------   N/A
-    2   ----   Setting section title text color   ------------------------   section#settings h2 { color: #999;}   ---------------------------------------------------------------------------------------------------------   N/A
-    3   ----   Colors of labels over the text fields   -------------------   .field label { color: #999;}   ----------------------------------------------------------------------------------------------------------------   N/A
-    4   ----   Background & text colors for the text input fields   ------   input[type=email], input[type=password], input[type=text], input[type=url] { background-color: #999; border-color: #999; color: #101010;}   ---   N/A
-    5   ----   Background & text colors for the multi-select options   ---   select { background-color: #999; color: #101010;}   -------------------------------------------------------------------------------------------   N/A
-    6   ----   Text color for the avatar image upload   ------------------   .field.avatar input[type=file] { color: #999;}   ----------------------------------------------------------------------------------------------   N/A
-    7   ----   Profile bio text field background and text color   --------   form#setting textarea { background-color: #999; border-color: #999; color: #101010;}   --------------------------------------------------------   N/A
-    8   ----   Social networks connections section title color   ---------   .setting-social-connect label { color: #999;}   -----------------------------------------------------------------------------------------------   N/A
-    9   ----   Social networks connections field background color   ------   .setting-social-connect .connection { Background-color: #999; box-shadow: none;}   ------------------------------------------------------------   N/A
-    10   ---   Social networks connections field text color   ------------   .setting-social-connect .connection p.label { color: #101010;}   ------------------------------------------------------------------------------   N/A
+  Part   ---   Description/What it effects   ------------------------------------------   Current text within "SettingsPages.innerHTML"   -----------------------------------------------------------------------------------------------   Extra Notes
+    1   ----   Settings selected section background & text color   --------------------   ul.form-nav li a.selected { background-color: #999; color: #101010; border-color: #999;}   ----------------------------------------------------   N/A
+    2   ----   Setting section title text color   -------------------------------------   section#settings h2 { color: #999;}   ---------------------------------------------------------------------------------------------------------   N/A
+    3   ----   Colors of labels over the text fields   --------------------------------   .field label { color: #999;}   ----------------------------------------------------------------------------------------------------------------   N/A
+    4   ----   Background & text colors for the text input fields   -------------------   input[type=email], input[type=password], input[type=text], input[type=url] { background-color: #999; border-color: #999; color: #101010;}   ---   N/A
+    5   ----   Background & text colors for the multi-select options   ----------------   select { background-color: #999; color: #101010;}   -------------------------------------------------------------------------------------------   N/A
+    6   ----   Text color for the avatar image upload   -------------------------------   .field.avatar input[type=file] { color: #999;}   ----------------------------------------------------------------------------------------------   N/A
+    7   ----   Profile bio text field background and text color   ---------------------   form#setting textarea { background-color: #999; border-color: #999; color: #101010;}   --------------------------------------------------------   N/A
+    8   ----   Social networks connections section title color   ----------------------   .setting-social-connect label { color: #999;}   -----------------------------------------------------------------------------------------------   N/A
+    9   ----   Social networks connections field background color   -------------------   .setting-social-connect .connection { Background-color: #999; box-shadow: none;}   ------------------------------------------------------------   N/A
+    10   ---   Social networks connections field text color   -------------------------   .setting-social-connect .connection p.label { color: #101010;}   ------------------------------------------------------------------------------   N/A
+    11   ---   Border around the "Connect Now" blue buttons within the text fields  ---   .setting-social-connect .connection a.btn, .setting-social-connect .connection a.thick { border: 1px solid #101010;}   ------------------------   N/A
     */
 
 /* Side Bar changes */ 
