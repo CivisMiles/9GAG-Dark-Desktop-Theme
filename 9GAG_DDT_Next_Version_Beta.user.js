@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         9GAG DDT *Next Version Changes*
 // @description  !!!!TEST Version!!!! A dark theme for 9GAG on desktop (non-mobile) environment !!!!TEST Version!!!!
-// @version      0.8.0.0 beta
+// @version      0.8.0.1 beta
 // @author       CivisMiles
 // @license      GNU GPL version 3 or any later version; https://github.com/CivisMiles/Dark-9GAG-Desktop-Theme/blob/master/LICENSE; http://www.gnu.org/copyleft/gpl.html
 // @homepage     https://github.com/CivisMiles/Dark-9GAG-Desktop-Theme
@@ -60,14 +60,19 @@ document.documentElement.appendChild(NotifyMenu);
 */
 
 // Upload popup window changes
-UploadWindow.innerHTML = 'section.modal header h3{ color: #999;} section.modal header p{ color: #999;} section.modal.upload .source-file { border: 1px solid #999; background-color: #101010} section.modal.upload .source-meme, section.modal.upload .source-url { border: 1px solid #999;}';
+UploadWindow.innerHTML = 'section.modal header h3{ color: #999;} section.modal header p{ color: #999;} section.modal.upload .source-file { border: 1px solid #999; background-color: #101010} section.modal.upload .source-meme, section.modal.upload .source-url { border: 1px solid #999;} section.modal.upload .field.post-info textarea { background-color: #999; color: #101010;} section.modal.upload .field.checkbox p { color: #999;} a.btn.grey { background-color: #09f; color: #fff;} ul.section-picker .text h3 { color: #999;} ul.section-picker .selector { background-color: #999;}';
 document.documentElement.appendChild(UploadWindow);
 /*
-  Part   ---   Description/What it effects   -------------------------------   Current text within "UploadWindow.innerHTML"   -----------------------------------------------------   Extra Notes
-    1   ----   Upload popup window title color   ---------------------------   section.modal header h3{ color: #999;}   -----------------------------------------------------------   Possible to be just for popupwindows in general
-    2   ----   Upload popup window title info color   ----------------------   section.modal header p{ color: #999;}   ------------------------------------------------------------   Possible to be just for popupwindows in general
-    3   ----   Upload popup window drag and drop file box border color   ---   section.modal.upload .source-file { border: 1px solid #999; background-color: #101010}   -----------   N/A
-    4   ----   Upload popup window url & meme box border color   -----------   section.modal.upload .source-meme, section.modal.upload .source-url { border: 1px solid #999;}   ---   N/A
+  Part   ---   Description/What it effects   --------------------------------------------------------------   Current text within "UploadWindow.innerHTML"   -----------------------------------------------------   Extra Notes
+    1   ----   Upload popup window title color   ----------------------------------------------------------   section.modal header h3{ color: #999;}   -----------------------------------------------------------   Possible to be just for popupwindows in general
+    2   ----   Upload popup window title info color   -----------------------------------------------------   section.modal header p{ color: #999;}   ------------------------------------------------------------   Possible to be just for popupwindows in general
+    3   ----   Upload popup window drag and drop file box border color   ----------------------------------   section.modal.upload .source-file { border: 1px solid #999; background-color: #101010}   -----------   N/A
+    4   ----   Upload popup window url & meme box border color   ------------------------------------------   section.modal.upload .source-meme, section.modal.upload .source-url { border: 1px solid #999;}   ---   N/A
+    5   ----   Post description textbox background and text color on the second popup window   ------------   section.modal.upload .field.post-info textarea { background-color: #999; color: #101010;}   --------   N/A
+    6   ----   Text color for the to checkbox options on the second popup window   ------------------------   section.modal.upload .field.checkbox p { color: #999;}   -------------------------------------------   N/A
+    7   ----   "Back" button background and text color for the second and third popup windows   -----------   a.btn.grey { background-color: #09f; color: #fff;}   -----------------------------------------------   N/A
+    8   ----   Section selection text color   -------------------------------------------------------------   ul.section-picker .text h3 { color: #999;}   -------------------------------------------------------   N/A
+    9   ----   Section selection unselected option circle background color   ------------------------------   ul.section-picker .selector { background-color: #999;}   -------------------------------------------   N/A
 */
 
 // Idle popup window changes
@@ -158,7 +163,7 @@ if (urlGAG.localeCompare("http://9gag.com/gag/") == 0) {
     */
 
     // Comments area changes
-    CommentSection.innerHTML = '.CS3 { background-color: #101010;} .CS3 .tab-bar { border-bottom: 1px solid #999;} .CS3 .tab-bar h3 { color: #999;} .CS3 .tab-bar ul.tab li.active a { background-color: rgba(255,255,255,.2); color: #101010;} .CS3 .tab-bar ul.tab a { color: #999;} .CS3 .comment-box .payload .textarea-container textarea.focus, .CS3 .comment-box.indent-1 .payload .textarea-container textarea { background-color: #101010; color: #999;} .CS3 .comment-entry .payload .username { color: #999;} .CS3 .comment-entry .payload .content { color: #999;} .CS3 span.drop { -webkit-filter: invert(60%);} .CS3 .comment-pop-menu ul { background-color: #101010; border: 1px solid #999;} .CS3 .comment-pop-menu a { background-color: #101010; color: #999;}';
+    CommentSection.innerHTML = '.CS3 { background-color: #101010;} .CS3 .tab-bar { border-bottom: 1px solid #999;} .CS3 .tab-bar h3 { color: #999;} .CS3 .tab-bar ul.tab li.active a { background-color: rgba(255,255,255,.2); color: #101010;} .CS3 .tab-bar ul.tab a { color: #999;} .CS3 .comment-box .payload .textarea-container textarea.focus, .CS3 .comment-box.indent-1 .payload .textarea-container textarea { background-color: #101010; color: #999;} .CS3 .comment-section-title h3 { color: #999;} .CS3 .comment-entry .payload .username { color: #999;} .CS3 .comment-entry .payload .content { color: #999;} .CS3 span.drop { -webkit-filter: invert(60%);} .CS3 .comment-pop-menu ul { background-color: #101010; border: 1px solid #999;} .CS3 .comment-pop-menu a { background-color: #101010; color: #999;} .CS3 .notice-message { background-color: #101010} .CS3 .notice-message p.align-center { color: #999}';
     document.documentElement.appendChild(CommentSection);
     /*
     Part   ---   Description/What it effects   ---------------------------------------   Current text within "CommentSection.innerHTML"   -------------------------------------------------------------------------------------------------------------------------------   Extra Notes
@@ -168,10 +173,13 @@ if (urlGAG.localeCompare("http://9gag.com/gag/") == 0) {
       4   ----   Comments section navigation active tab background and text color  ---   .CS3 .tab-bar ul.tab li.active a { background-color: rgba(255,255,255,.2); color: #101010;}   ----------------------------------------------------------------------------------   N/A
       5   ----   Comments section navigation inactive tab text color   ---------------   .CS3 .tab-bar ul.tab a { color: #999;}   ---------------------------------------------------------------------------------------------------------------------------------------   N/A
       6   ----   Comment text box background and text color   ------------------------   .CS3 .comment-box .payload .textarea-container textarea.focus, .CS3 .comment-box.indent-1 .payload .textarea-container textarea { background-color: #101010; color: #999;}   ---   N/A
-      7   ----   Posted comment username text color   --------------------------------   .CS3 .comment-entry .payload .username { color: #999;}   -----------------------------------------------------------------------------------------------------------------------   N/A
-      8   ----   Posted comment entry text color   -----------------------------------   .CS3 .comment-entry .payload .content { color: #999;}   ------------------------------------------------------------------------------------------------------------------------   N/A
-      9   ----   More options arrow color inversion  ---------------------------------   .CS3 span.drop { -webkit-filter: invert(60%);}   -------------------------------------------------------------------------------------------------------------------------------   N/A
-      10   ---   More options background and border color   --------------------------   .CS3 .comment-pop-menu ul { background-color: #101010; border: 1px solid #999;}   ----------------------------------------------------------------------------------------------   N/A
-      11   ---   More options text color   -------------------------------------------   .CS3 .comment-pop-menu a { background-color: #101010; color: #999;}   ----------------------------------------------------------------------------------------------------------   N/A
+      7   ----   Section title for your comments on your own posts   -----------------   .CS3 .comment-section-title h3 { color: #999;}   -------------------------------------------------------------------------------------------------------------------------------   N/A
+      8   ----   Posted comment username text color   --------------------------------   .CS3 .comment-entry .payload .username { color: #999;}   -----------------------------------------------------------------------------------------------------------------------   N/A
+      9   ----   Posted comment entry text color   -----------------------------------   .CS3 .comment-entry .payload .content { color: #999;}   ------------------------------------------------------------------------------------------------------------------------   N/A
+      10   ---   More options arrow color inversion  ---------------------------------   .CS3 span.drop { -webkit-filter: invert(60%);}   -------------------------------------------------------------------------------------------------------------------------------   N/A
+      11   ---   More options background and border color   --------------------------   .CS3 .comment-pop-menu ul { background-color: #101010; border: 1px solid #999;}   ----------------------------------------------------------------------------------------------   N/A
+      12   ---   More options text color   -------------------------------------------   .CS3 .comment-pop-menu a { background-color: #101010; color: #999;}   ----------------------------------------------------------------------------------------------------------   N/A
+      13   ---   Background color for the "Be the first to comment" section   --------   .CS3 .notice-message { background-color: #101010}   ----------------------------------------------------------------------------------------------------------------------------   N/A
+      14   ---   Text color for the "Be the first to comment" section title   --------   .CS3 .notice-message p.align-center { color: #999}   ---------------------------------------------------------------------------------------------------------------------------   N/A
     */
 }
