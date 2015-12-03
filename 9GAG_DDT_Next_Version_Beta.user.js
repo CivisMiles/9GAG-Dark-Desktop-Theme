@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         9GAG DDT *Next Version Changes*
 // @description  !!!!TEST Version!!!! A dark theme for 9GAG on desktop (non-mobile) environment !!!!TEST Version!!!!
-// @version      0.8.0.1 beta
+// @version      0.8.0.2 beta
 // @author       CivisMiles
 // @license      GNU GPL version 3 or any later version; https://github.com/CivisMiles/Dark-9GAG-Desktop-Theme/blob/master/LICENSE; http://www.gnu.org/copyleft/gpl.html
 // @homepage     https://github.com/CivisMiles/Dark-9GAG-Desktop-Theme
@@ -47,16 +47,17 @@ document.documentElement.appendChild(SearchBar);
 */
 
 // Notification Menu changes
-NotifyMenu.innerHTML = '.notification-menu { background-color: #101010; border: 1px solid #999} .notification-menu .title h3{ color: #999;} .notification-list li a.item.new { background-color: #101010; border-color: #999;} .notification-list .avatar-container { background-color: #999;} .notification-list p.message { color: #999;} .notification-menu .bumper{ background-color: #101010; border-top: 1px solid #999}';
+NotifyMenu.innerHTML = '.notification-menu { background-color: #101010; border: 1px solid #999} .notification-menu .title h3{ color: #999;} .notification-list li a.item.new { background-color: #101010; border-color: #999;} .notification-list li:last-child a.item { background-color: #101010} .notification-list .avatar-container { background-color: #999;} .notification-list p.message { color: #999;} .notification-menu .bumper{ background-color: #101010; border-top: 1px solid #999}';
 document.documentElement.appendChild(NotifyMenu);
 /*
-  Part   ---   Description/What it effects   -----------------------------------   Current text within "NotifyMenu.innerHTML"   -------------------------------------------   Extra Notes
-    1   ----   Notification menu background and border color   -----------------   .notification-menu { background-color: #101010; border: 1px solid #999}   --------------   N/A
-    2   ----   Notification menu title text color   ----------------------------   .notification-menu .title h3{ color: #999;}   ------------------------------------------   N/A
-    3   ----   Notification menu notification background and border color   ----   .notification-list li a.item.new { background-color: #101010; border-color: #999;}   ---   N/A
-    4   ----   Notification menu avatar background  color   --------------------   .notification-list .avatar-container { background-color: #999;}   ----------------------   N/A
-    5   ----   Notification menu notification text color   ---------------------   .notification-list p.message { color: #999;}   -----------------------------------------   N/A
-    6   ----   Notification menu bottom bumper background and border color   ---   .notification-menu .bumper{ background-color: #101010; border-top: 1px solid #999}   ---   N/A
+  Part   ---   Description/What it effects   -----------------------------------------------   Current text within "NotifyMenu.innerHTML"   -------------------------------------------   Extra Notes
+    1   ----   Notification menu background and border color   -----------------------------   .notification-menu { background-color: #101010; border: 1px solid #999}   --------------   N/A
+    2   ----   Notification menu title text color   ----------------------------------------   .notification-menu .title h3{ color: #999;}   ------------------------------------------   N/A
+    3   ----   Notification menu multi-notification background and border color   ----------   .notification-list li a.item.new { background-color: #101010; border-color: #999;}   ---   N/A
+    4   ----   Notification menu Single/last-notification background and border color   ----   .notification-list li:last-child a.item { background-color: #101010}   -----------------   N/A
+    5   ----   Notification menu avatar background  color   --------------------------------   .notification-list .avatar-container { background-color: #999;}   ----------------------   N/A
+    6   ----   Notification menu notification text color   ---------------------------------   .notification-list p.message { color: #999;}   -----------------------------------------   N/A
+    7   ----   Notification menu bottom bumper background and border color   ---------------   .notification-menu .bumper{ background-color: #101010; border-top: 1px solid #999}   ---   N/A
 */
 
 // Upload popup window changes
