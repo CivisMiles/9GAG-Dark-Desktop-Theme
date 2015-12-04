@@ -12,6 +12,11 @@
 // @include      https://9gag.com/*
 // ==/UserScript==
 
+// Creation and initailization of variables many variables
+var El = document.createElement('style'); var SearchBar = document.createElement('style'); var NotifyMenu = document.createElement('style'); var UploadWindow = document.createElement('style'); var IdleWindow = document.createElement('style'); var NotSignedIN = document.createElement('style')
+El.type = SearchBar.type = NotifyMenu.type = UploadWindow.type = IdleWindow.type = NotSignedIN.type = 'text/css';
+var url = window.location.href; var urlProfile = url.substring(0,18); var urlSettings = url.substring(0,25); var urlGAG = url.substring(0,20); var urlContact = url.substring(0,23); //window.alert(urlContact);
+
 // Changes that effect multiple parts/sections
 El.innerHTML = '#container { background-color: #101010;} .popup-menu ul { background-color: #101010; border: 1px solid #999} .popup-menu a { background-color: #101010; color: #999;} section.modal { background-color: #101010;} section.modal a.btn-close { -webkit-filter: invert(60%);} section.section-header { background-color: #101010; border-bottom: 1px solid #999; box-shadow: none} section.section-header h2 { color: #999;} .section-nav { background-color: #101010; border-bottom: 1px solid #999;} .section-nav a { color: #999;} .section-nav a.selected { background-color: rgba(255,255,255,.2); color: #101010;} .post-text-container { color: #999;} a.back-to-top { -webkit-filter: invert(100%); border: 1px solid #666} .loading a.btn.end { color: #fff; background-color: #09f; border-color: #09f;} .static-block { background-color: #101010; color: #999;} footer .naughty-box { background-color: #101010;} select { background-color: #999; color: #101010;} .field label { color: #999;}';
 document.documentElement.appendChild(El);
