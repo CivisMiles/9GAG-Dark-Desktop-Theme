@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         9GAG DDT *Next Version Changes*
 // @description  !!!!TEST Version!!!! A dark theme for 9GAG on desktop (non-mobile) environment !!!!TEST Version!!!!
-// @version      0.8.0.4 beta
+// @version      0.8.0.5 beta
 // @author       CivisMiles
 // @license      GNU GPL version 3 or any later version; https://github.com/CivisMiles/Dark-9GAG-Desktop-Theme/blob/master/LICENSE; http://www.gnu.org/copyleft/gpl.html
 // @homepage     https://github.com/CivisMiles/Dark-9GAG-Desktop-Theme
@@ -12,13 +12,8 @@
 // @include      https://9gag.com/*
 // ==/UserScript==
 
-// Creation and initailization of variables many variables
-var El = document.createElement('style'); var SearchBar = document.createElement('style'); var NotifyMenu = document.createElement('style'); var UploadWindow = document.createElement('style'); var IdleWindow = document.createElement('style');
-El.type = SearchBar.type = NotifyMenu.type = UploadWindow.type = IdleWindow.type = 'text/css';
-var url = window.location.href; var urlProfile = url.substring(0,18); var urlSettings = url.substring(0,25); var urlGAG = url.substring(0,20);
-
 // Changes that effect multiple parts/sections
-El.innerHTML = '#container { background-color: #101010;} .popup-menu ul { background-color: #101010; border: 1px solid #999} .popup-menu a { background-color: #101010; color: #999;} section.modal { background-color: #101010;} section.modal a.btn-close { -webkit-filter: invert(60%);} section.section-header { background-color: #101010; border-bottom: 1px solid #999; box-shadow: none} section.section-header h2 { color: #999;} .section-nav { background-color: #101010; border-bottom: 1px solid #999;} .section-nav a { color: #999;} .section-nav a.selected { background-color: rgba(255,255,255,.2); color: #101010;} .post-text-container { color: #999;} a.back-to-top { -webkit-filter: invert(100%); border: 1px solid #666} .loading a.btn.end { color: #fff; background-color: #09f; border-color: #09f;}';
+El.innerHTML = '#container { background-color: #101010;} .popup-menu ul { background-color: #101010; border: 1px solid #999} .popup-menu a { background-color: #101010; color: #999;} section.modal { background-color: #101010;} section.modal a.btn-close { -webkit-filter: invert(60%);} section.section-header { background-color: #101010; border-bottom: 1px solid #999; box-shadow: none} section.section-header h2 { color: #999;} .section-nav { background-color: #101010; border-bottom: 1px solid #999;} .section-nav a { color: #999;} .section-nav a.selected { background-color: rgba(255,255,255,.2); color: #101010;} .post-text-container { color: #999;} a.back-to-top { -webkit-filter: invert(100%); border: 1px solid #666} .loading a.btn.end { color: #fff; background-color: #09f; border-color: #09f;} .static-block { background-color: #101010; color: #999;} footer .naughty-box { background-color: #101010;} select { background-color: #999; color: #101010;} .field label { color: #999;}';
 document.documentElement.appendChild(El);
 /*
   Part   ---   Description/What it effects   ----------------------------------------------------------------   Current text within "E1.innerHTML"   ---------------------------------------------------------------------   Extra Notes
@@ -35,6 +30,19 @@ document.documentElement.appendChild(El);
     11   ---   Color of text underneath a post e.i. "See Full Video Here"  ----------------------------------   .post-text-container { color: #999;}   -------------------------------------------------------------------   N/A
     12   ---   Back to top arrow from the bottom right corner color and border   ----------------------------   a.back-to-top { -webkit-filter: invert(100%); border: 1px solid #666}   ----------------------------------   N/A
     13   ---   Color of the bar Bar at the end of the feed that says "I Want More Fun" or "No More Posts  ---   .loading a.btn.end { color: #fff; background-color: #09f; border-color: #09f;}   -------------------------   N/A
+    14   ---   General big text block, like TOS, background & text color   ----------------------------------   .static-block { background-color: #101010; color: #999;}   -----------------------------------------------   N/A
+    15   ---   Ad footer background color   -----------------------------------------------------------------   footer .naughty-box { background-color: #101010;}   ------------------------------------------------------   N/A
+    16   ---   General multi-select option background & text colors   ---------------------------------------   select { background-color: #999; color: #101010;}   ------------------------------------------------------   N/A
+    17   ---   General labels over text fields color  -------------------------------------------------------   .field label { color: #999;}   ---------------------------------------------------------------------------   N/A
+*/
+
+// Changes when you are not signed in
+NotSignedIN.innerHTML = 'section#signup h2 { color: #999;}';
+document.documentElement.appendChild(NotSignedIN);
+/*
+  Part   ---   Description/What it effects   --------------------------   Current text within "SearchBar.innerHTML"   -------------------------------------   Extra Notes
+    1   ----   Signup Popup window title text color   -------------------------------------------------------   section#signup h2 { color: #999;}   ----------------------------------------------------------------------   N/A
+
 */
 
 // Search Bar changes
@@ -88,6 +96,21 @@ document.documentElement.appendChild(IdleWindow);
     3   ----   Suggested posts title text color   ---   .ticker a .info h3 { color: #999;}   ----------------   N/A
 */
 
+if (urlContact.localeCompare("http://9gag.com/contact") == 0) {
+    // Contact Us form webpage
+    var ContactUs = document.createElement('style'); ContactUs.type = 'text/css';
+    ContactUs.innerHTML = 'section#contact-form { color: #999;} input[type=email], input[type=password], input[type=text], input[type=url] { background-color: #999; color: #101010; border-color: #999;} section#contact-form textarea { background-color: #999; color: #101010; border-color: #999;} section#contact-form a.upload-selected { color: #999;} .file-field { background-color: #101010; color: #999; border-color: #101010; box-shadow: none;}';
+    document.documentElement.appendChild(ContactUs);
+    /*
+      Part   ---   Description/What it effects   ----------------------   Current text within "IdleWindow.innerHTML"   --------------------------------------------------------------------------------------------------   Extra Notes
+        1   ----   Contact Us page title color   ----------------------   section#contact-form { color: #999;}   --------------------------------------------------------------------------------------------------------   N/A
+        2   ----   Text field background & text colors   --------------   input[type=email], input[type=password], input[type=text], input[type=url] { background-color: #999; color: #101010; border-color: #999;}   ---   N/A
+        3   ----   Message text filed box background & text color   ---   section#contact-form textarea { background-color: #999; color: #101010; border-color: #999;}   ------------------------------------------------   N/A
+        4   ----   Upload a file Title color   ------------------------   section#contact-form a.upload-selected { color: #999;}   --------------------------------------------------------------------------------------   N/A
+        5   ----   Upload a file section background & text color   ----   .file-field { background-color: #101010; color: #999; border-color: #101010; box-shadow: none;}   ---------------------------------------------   N/A
+    */
+}
+
 if (urlSettings.localeCompare("https://9gag.com/settings") != 0 && urlGAG.localeCompare("http://9gag.com/gag/") != 0) {
     // BannerPostFeed changes
     var PostFeed = document.createElement('style'); PostFeed.type = 'text/css';
@@ -120,21 +143,20 @@ if (urlProfile.localeCompare("http://9gag.com/u/") == 0) {
 if (urlSettings.localeCompare("https://9gag.com/settings") == 0) {
     // Settings Pages changes
     var SettingsPages = document.createElement('style'); SettingsPages.type = 'text/css';
-    SettingsPages.innerHTML = 'ul.form-nav li a.selected { background-color: #999; color: #101010; border-color: #999;} section#settings h2 { color: #999;} .field label { color: #999;} input[type=email], input[type=password], input[type=text], input[type=url] { background-color: #999; border-color: #999; color: #101010;} select { background-color: #999; color: #101010;} .field.avatar input[type=file] { color: #999;} form#setting textarea { background-color: #999; border-color: #999; color: #101010;} .setting-social-connect label { color: #999;} .setting-social-connect .connection { Background-color: #999; box-shadow: none;} .setting-social-connect .connection p.label { color: #101010;} .setting-social-connect .connection a.btn, .setting-social-connect .connection a.thick { border: 1px solid #101010;}';
+    SettingsPages.innerHTML = 'ul.form-nav li a.selected { background-color: #999; color: #101010; border-color: #999;} section#settings h2 { color: #999;} input[type=email], input[type=password], input[type=text], input[type=url] { background-color: #999; border-color: #999; color: #101010;} select { background-color: #999; color: #101010;} .field.avatar input[type=file] { color: #999;} form#setting textarea { background-color: #999; border-color: #999; color: #101010;} .setting-social-connect label { color: #999;} .setting-social-connect .connection { Background-color: #999; box-shadow: none;} .setting-social-connect .connection p.label { color: #101010;} .setting-social-connect .connection a.btn, .setting-social-connect .connection a.thick { border: 1px solid #101010;}';
     document.documentElement.appendChild(SettingsPages);
     /*
     Part   ---   Description/What it effects   ------------------------------------------   Current text within "SettingsPages.innerHTML"   -----------------------------------------------------------------------------------------------   Extra Notes
       1   ----   Settings selected section background & text color   --------------------   ul.form-nav li a.selected { background-color: #999; color: #101010; border-color: #999;}   ----------------------------------------------------   N/A
       2   ----   Setting section title text color   -------------------------------------   section#settings h2 { color: #999;}   ---------------------------------------------------------------------------------------------------------   N/A
-      3   ----   Colors of labels over the text fields   --------------------------------   .field label { color: #999;}   ----------------------------------------------------------------------------------------------------------------   N/A
-      4   ----   Background & text colors for the text input fields   -------------------   input[type=email], input[type=password], input[type=text], input[type=url] { background-color: #999; border-color: #999; color: #101010;}   ---   N/A
-      5   ----   Background & text colors for the multi-select options   ----------------   select { background-color: #999; color: #101010;}   -------------------------------------------------------------------------------------------   N/A
-      6   ----   Text color for the avatar image upload   -------------------------------   .field.avatar input[type=file] { color: #999;}   ----------------------------------------------------------------------------------------------   N/A
-      7   ----   Profile bio text field background and text color   ---------------------   form#setting textarea { background-color: #999; border-color: #999; color: #101010;}   --------------------------------------------------------   N/A
-      8   ----   Social networks connections section title color   ----------------------   .setting-social-connect label { color: #999;}   -----------------------------------------------------------------------------------------------   N/A
-      9   ----   Social networks connections field background color   -------------------   .setting-social-connect .connection { Background-color: #999; box-shadow: none;}   ------------------------------------------------------------   N/A
-      10   ---   Social networks connections field text color   -------------------------   .setting-social-connect .connection p.label { color: #101010;}   ------------------------------------------------------------------------------   N/A
-      11   ---   Border around the "Connect Now" blue buttons within the text fields  ---   .setting-social-connect .connection a.btn, .setting-social-connect .connection a.thick { border: 1px solid #101010;}   ------------------------   N/A
+      3   ----   Background & text colors for the text input fields   -------------------   input[type=email], input[type=password], input[type=text], input[type=url] { background-color: #999; border-color: #999; color: #101010;}   ---   N/A
+      4   ----   Background & text colors for the multi-select options   ----------------   select { background-color: #999; color: #101010;}   -------------------------------------------------------------------------------------------   N/A
+      5   ----   Text color for the avatar image upload   -------------------------------   .field.avatar input[type=file] { color: #999;}   ----------------------------------------------------------------------------------------------   N/A
+      6   ----   Profile bio text field background and text color   ---------------------   form#setting textarea { background-color: #999; border-color: #999; color: #101010;}   --------------------------------------------------------   N/A
+      7   ----   Social networks connections section title color   ----------------------   .setting-social-connect label { color: #999;}   -----------------------------------------------------------------------------------------------   N/A
+      8   ----   Social networks connections field background color   -------------------   .setting-social-connect .connection { Background-color: #999; box-shadow: none;}   ------------------------------------------------------------   N/A
+      9   ----   Social networks connections field text color   -------------------------   .setting-social-connect .connection p.label { color: #101010;}   ------------------------------------------------------------------------------   N/A
+      10   ---   Border around the "Connect Now" blue buttons within the text fields  ---   .setting-social-connect .connection a.btn, .setting-social-connect .connection a.thick { border: 1px solid #101010;}   ------------------------   N/A
     */
 } else {
     // Side Bar changes
