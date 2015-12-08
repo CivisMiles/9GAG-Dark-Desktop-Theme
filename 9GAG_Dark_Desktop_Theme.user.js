@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         9GAG Dark Desktop Theme (9GAG DDT)
 // @description  A dark theme for 9GAG on desktop (non-mobile) environment
-// @version      0.7.0.3
+// @version      0.7.0.4
 // @author       CivisMiles
 // @license      GNU GPL version 3 or any later version; https://github.com/CivisMiles/9GAG-Dark-Desktop-Theme/blob/master/LICENSE; http://www.gnu.org/copyleft/gpl.html
 // @homepage     https://github.com/CivisMiles/9GAG-Dark-Desktop-Theme
