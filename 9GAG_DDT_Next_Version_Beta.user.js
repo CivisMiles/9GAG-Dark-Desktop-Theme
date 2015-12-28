@@ -6,7 +6,7 @@
 // @license      GNU GPL version 3 or any later version; https://github.com/CivisMiles/Dark-9GAG-Desktop-Theme/blob/master/LICENSE; http://www.gnu.org/copyleft/gpl.html
 // @homepage     https://github.com/CivisMiles/Dark-9GAG-Desktop-Theme
 // @updateURL    https://github.com/CivisMiles/9GAG-Dark-Desktop-Theme/raw/master/9GAG_DDT_Next_Version_Beta.user.js
-// @downloadURL    https://github.com/CivisMiles/9GAG-Dark-Desktop-Theme/raw/master/9GAG_Dark_Desktop_Theme.user.js
+// @downloadURL  https://github.com/CivisMiles/9GAG-Dark-Desktop-Theme/raw/master/9GAG_Dark_Desktop_Theme.user.js
 // @grant        none
 // @run-at       document-start
 // @include      http://9gag.com/*
