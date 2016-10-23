@@ -7,6 +7,8 @@
 // @homepage     https://github.com/CivisMiles/Dark-9GAG-Desktop-Theme
 // @updateURL    https://github.com/CivisMiles/9GAG-Dark-Desktop-Theme/raw/master/9GAG_DDT_Next_Version_Beta.user.js
 // @downloadURL  https://github.com/CivisMiles/9GAG-Dark-Desktop-Theme/raw/master/9GAG_DDT_Next_Version_Beta.user.js
+// @supportURL   https://docs.google.com/forms/d/15Xe6K1VUnvCFHC7MYDbJVwAFWSGbmALXPRhANAWPuhA/viewform
+// @supportURL   https://github.com/CivisMiles/9GAG-Dark-Desktop-Theme/issues
 // @grant        none
 // @run-at       document-start
 // @include      http://9gag.com/*
