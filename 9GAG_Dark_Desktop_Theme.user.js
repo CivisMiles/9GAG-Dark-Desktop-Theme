@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         9GAG Dark Desktop Theme (9GAG DDT)
 // @description  A dark theme for 9GAG on desktop (non-mobile) environment
-// @version      0.7.0.5
+// @version      0.9
 // @author       CivisMiles
 // @license      GNU GPL version 3 or any later version; https://github.com/CivisMiles/9GAG-Dark-Desktop-Theme/blob/master/LICENSE; http://www.gnu.org/copyleft/gpl.html
 // @homepage     https://github.com/CivisMiles/9GAG-Dark-Desktop-Theme
 // @updateURL    https://github.com/CivisMiles/9GAG-Dark-Desktop-Theme/raw/master/9GAG_Dark_Desktop_Theme.user.js
-// @downloadURL    https://github.com/CivisMiles/9GAG-Dark-Desktop-Theme/raw/master/9GAG_Dark_Desktop_Theme.user.js
+// @downloadURL  https://github.com/CivisMiles/9GAG-Dark-Desktop-Theme/raw/master/9GAG_Dark_Desktop_Theme.user.js
 // @supportURL   https://docs.google.com/forms/d/15Xe6K1VUnvCFHC7MYDbJVwAFWSGbmALXPRhANAWPuhA/viewform
 // @supportURL   https://github.com/CivisMiles/9GAG-Dark-Desktop-Theme/issues
 // @grant        none
@@ -16,9 +16,9 @@
 // ==/UserScript==
 
 // Creation and initailization of variables many variables
-var El = document.createElement('style'); var SearchBar = document.createElement('style'); var NotifyMenu = document.createElement('style'); var UploadWindow = document.createElement('style'); var IdleWindow = document.createElement('style');
-El.type = SearchBar.type = NotifyMenu.type = UploadWindow.type = IdleWindow.type = 'text/css';
-var url = window.location.href; var urlProfile = url.substring(0,18); var urlSettings = url.substring(0,25); var urlGAG = url.substring(0,20); var urlContact = url.substring(0,23); //window.alert(urlContact);
+var El = document.createElement('style'); var SearchBar = document.createElement('style'); var NotifyMenu = document.createElement('style'); var UploadWindow = document.createElement('style'); var IdleWindow = document.createElement('style'); var MoreMenu = document.createElement('style');
+El.type = SearchBar.type = NotifyMenu.type = UploadWindow.type = IdleWindow.type = MoreMenu.type = 'text/css';
+var url = window.location.href; var urlProfile = url.substring(0,18); var urlSettings = url.substring(0,25); var urlGAG = url.substring(0,20); var urlContact = url.substring(0,23); var urlNotifyPage = url.substring(0,29); //window.alert(urlContact);
 
 // Changes that effect multiple parts/sections
 El.innerHTML = '#container { background-color: #101010;} .popup-menu ul { background-color: #101010; border: 1px solid #999} .popup-menu a { background-color: #101010; color: #999;} section.modal { background-color: #101010;} section.modal a.btn-close { -webkit-filter: invert(60%);} section.section-header { background-color: #101010; border-bottom: 1px solid #999; box-shadow: none} section.section-header h2 { color: #999;} .section-nav { background-color: #101010; border-bottom: 1px solid #999;} .section-nav a { color: #999;} .section-nav a.selected { background-color: rgba(255,255,255,.2); color: #101010;} .post-text-container { color: #999;} a.back-to-top { -webkit-filter: invert(100%); border: 1px solid #666} .loading a.btn.end { color: #fff; background-color: #09f; border-color: #09f;} .loading a.btn.spin { background-color: #FFF; -webkit-filter: invert(93.55%);} .static-block { background-color: #101010; color: #999;} footer .naughty-box { background-color: #101010;} select { background-color: #999; color: #101010;} section#signup h2 { color: #999;} .field label { color: #999;} input[type=email], input[type=password], input[type=text], input[type=url] { background-color: #999; border-color: #999; color: #101010;}';
@@ -98,7 +98,17 @@ document.documentElement.appendChild(IdleWindow);
     3   ----   Suggested posts title text color   ---   .ticker a .info h3 { color: #999;}   ----------------   N/A
 */
 
-if (urlContact.localeCompare("http://9gag.com/contact") == 0) {
+// Top Bar More Popup Menu
+MoreMenu.innerHTML = '.flexMenu-popup { background-color: #101010; border: 1px solid #999} .nav-menu .flexMenu-popup li a { background-color: #101010; color: #999}';
+document.documentElement.appendChild(MoreMenu);
+/*
+  Part   ---   Description/What it effects   --------   Current text within "MoreMenu.innerHTML"   -----------------------------------   Extra Notes
+    1   ----   More menu background and border color   -------   .flexMenu-popup { background-color: #101010; border: 1px solid #999}   -------   N/A
+    2   ----   More menu options background and text color   ---   .nav-menu .flexMenu-popup li a { background-color: #101010; color: #999}   ---   N/A
+*/
+
+
+if (urlContact.localeCompare("http://9gag.com/contact") === 0) {
     // Contact Us form webpage
     var ContactUs = document.createElement('style'); ContactUs.type = 'text/css';
     ContactUs.innerHTML = 'section#contact-form { color: #999;} input[type=email], input[type=password], input[type=text], input[type=url] { background-color: #999; color: #101010; border-color: #999;} section#contact-form textarea { background-color: #999; color: #101010; border-color: #999;} section#contact-form a.upload-selected { color: #999;} .file-field { background-color: #101010; color: #999; border-color: #101010; box-shadow: none;}';
@@ -113,7 +123,7 @@ if (urlContact.localeCompare("http://9gag.com/contact") == 0) {
     */
 }
 
-if (urlSettings.localeCompare("https://9gag.com/settings") != 0 && urlGAG.localeCompare("http://9gag.com/gag/") != 0) {
+if (urlSettings.localeCompare("https://9gag.com/settings") !== 0 && urlGAG.localeCompare("http://9gag.com/gag/") !== 0 && urlNotifyPage.localeCompare("http://9gag.com/notifications") !== 0) {
     // BannerPostFeed changes
     var PostFeed = document.createElement('style'); PostFeed.type = 'text/css';
     PostFeed.innerHTML = 'section#list-view-2 article { border-top: 1px solid #999;} section#list-view-2 h2 a { background-color: transparent; color: #999;} a.post-read-more { background-color: #101010; border: 1px solid #999;} .post-read-more .shadow { width: 0px; height: 0px;}';
@@ -127,7 +137,7 @@ if (urlSettings.localeCompare("https://9gag.com/settings") != 0 && urlGAG.locale
     */
 }
 
-if (urlProfile.localeCompare("http://9gag.com/u/") == 0) {
+if (urlProfile.localeCompare("http://9gag.com/u/") === 0) {
     // Profile Page changes
     var ProfilePage = document.createElement('style'); ProfilePage.type = 'text/css';
     ProfilePage.innerHTML = 'section.profile-header .profile.no-banner .info { background-color: #101010;} section.profile-header h2 { color: #999;} section.profile-header .info p { color: #999; opacity: 1;} section#list-view-2 .activity-text a { color: #999;} section#list-view-2 .activity-text { color: #999;}';
@@ -141,8 +151,8 @@ if (urlProfile.localeCompare("http://9gag.com/u/") == 0) {
       5   ----   Profile page activity above post text color   ----------------------   section#list-view-2 .activity-text { color: #999;}   -----------------------------------   N/A
     */
 }
-    
-if (urlSettings.localeCompare("https://9gag.com/settings") == 0) {
+
+if (urlSettings.localeCompare("https://9gag.com/settings") === 0) {
     // Settings Pages changes
     var SettingsPages = document.createElement('style'); SettingsPages.type = 'text/css';
     SettingsPages.innerHTML = 'ul.form-nav li a.selected { background-color: #999; color: #101010; border-color: #999;} section#settings h2 { color: #999;} input[type=email], input[type=password], input[type=text], input[type=url] { background-color: #999; border-color: #999; color: #101010;} select { background-color: #999; color: #101010;} .field.avatar input[type=file] { color: #999;} form#setting textarea { background-color: #999; border-color: #999; color: #101010;} .setting-social-connect label { color: #999;} .setting-social-connect .connection { Background-color: #999; box-shadow: none;} .setting-social-connect .connection p.label { color: #101010;} .setting-social-connect .connection a.btn, .setting-social-connect .connection a.thick { border: 1px solid #101010;}';
@@ -166,15 +176,29 @@ if (urlSettings.localeCompare("https://9gag.com/settings") == 0) {
     SideBar.innerHTML = 'section.block-feature-cover .info-container a { color: #999;} h2.sidebar-title { color: #999;} section.block-social-love .social-love a.instagram-follow { background-color: #FDFDFD;} section.footer { background-color: transparent;}';
     document.documentElement.appendChild(SideBar);
     /*
-    Part   ---   Description/What it effects   --------------------------------------   Current text within "SideBar.innerHTML"   ---------------------------------------------------   Extra Notes
-      1   ----   Side bar suggested posts title text color   ------------------------   section.block-feature-cover .info-container a { color: #999;}   -----------------------------   N/A
-      2   ----   Side bar app/play store & social media title text color   ----------   h2.sidebar-title { color: #999;}   ----------------------------------------------------------   N/A
-      3   ----   Side bar instagram button background color   -----------------------   section.block-social-love .social-love a.instagram-follow { background-color: #FDFDFD;}   ---   it is possible by playing with this, or something similar to this, to completly remove all socailmedia buttons from your 9GAG experience 
-      4   ----   Side bar footer links background   ---------------------------------   section.footer { background-color: transparent;}   ------------------------------------------   N/A
+    Part   ---   Description/What it effects   -------------------------------   Current text within "SideBar.innerHTML"   ---------------------------------------------------   Extra Notes
+      1   ----   Side bar suggested posts title text color   -----------------   section.block-feature-cover .info-container a { color: #999;}   -----------------------------   N/A
+      2   ----   Side bar app/play store & social media title text color   ---   h2.sidebar-title { color: #999;}   ----------------------------------------------------------   N/A
+      3   ----   Side bar instagram button background color   ----------------   section.block-social-love .social-love a.instagram-follow { background-color: #FDFDFD;}   ---   it is possible by playing with this, or something similar to this, to completly remove all socailmedia buttons from your 9GAG experience
+      4   ----   Side bar footer links background   --------------------------   section.footer { background-color: transparent;}   ------------------------------------------   N/A
     */
 }
 
-if (urlGAG.localeCompare("http://9gag.com/gag/") == 0) {
+if (urlNotifyPage.localeCompare("http://9gag.com/notifications") === 0) {
+    // Notification Page changes
+    var NotifyPage = document.createElement('style'); NotifyPage.type = 'text/css';
+    NotifyPage.innerHTML = '.notification-detail .section-title { color: #999;} .notification-text-list .label h3 { color: #999;} .notification-text-list a { color: #999;} .notification-text-list p { color: #999;}';
+    document.documentElement.appendChild(NotifyPage);
+    /*
+    Part   ---   Description/What it effects   ---------------------   Current text within "NotifyPage.innerHTML"   ------------   Extra Notes
+      1   ----   Notification Page Title color   -------------------   .notification-detail .section-title { color: #999;}   ---   N/A
+      2   ----   Time of notification section title text color   ---   .notification-text-list .label h3 { color: #999;}   -----   N/A
+      3   ----   Username and Post text color   --------------------   .notification-text-list a { color: #999;}   -------------   N/A
+      4   ----   Notification action text color   ------------------   .notification-text-list p { color: #999;}   -------------   N/A
+    */
+}
+
+if (urlGAG.localeCompare("http://9gag.com/gag/") === 0) {
     var IndividPost = document.createElement('style'); var CommentSection = document.createElement('style'); IndividPost.type = CommentSection.type = 'text/css';
 
     // Individual Post Page changes
